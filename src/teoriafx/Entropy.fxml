@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox fillWidth="false" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teoriafx.EntropyController">
+   <children>
+      <Label text="Ingrese las frecuencias" />
+      <HBox fillHeight="false" prefWidth="200.0" spacing="10.0" VBox.vgrow="NEVER">
+         <children>
+            <TextField fx:id="newFrecuency" minWidth="-Infinity" promptText="0 &lt; Frecuencia &lt;1" />
+            <Button fx:id="addFrecuncy" minWidth="-Infinity" mnemonicParsing="false" onAction="#addFrecuency" text="Añadir" textAlignment="CENTER" />
+         </children>
+      </HBox>
+      <ListView fx:id="frecuencyList" editable="true" maxWidth="-Infinity" />
+      <HBox spacing="10.0">
+         <children>
+            <ChoiceBox fx:id="type" prefWidth="150.0" />
+            <Button fx:id="calculate" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#calculate" text="Calcular" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_RIGHT" layoutX="20.0" layoutY="340.0" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="257.0" spacing="10.0">
+         <children>
+            <Label contentDisplay="RIGHT" minWidth="-Infinity" text="Entropia:">
+               <graphic>
+                  <TextField fx:id="entropy" alignment="TOP_LEFT" editable="false" />
+               </graphic>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="375.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+         <children>
+            <Label contentDisplay="RIGHT" minWidth="-Infinity" text="Informacion Mutua:">
+               <graphic>
+                  <TextField fx:id="mutual" editable="false" />
+               </graphic>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
